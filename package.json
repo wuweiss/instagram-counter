@@ -1,0 +1,31 @@
+{
+  "name": "instagram-counter",
+  "version": "1.0.0",
+  "description": "Get count of followers for an instagram account",
+  "main": "index.js",
+  "scripts": {
+      "start": "node index.js",
+      "lint": "eslint \"src/**/*\"",
+      "lint:// FIXME: x": "npm run lint -- --fix",
+      "test": "run lint && npm run test:run",
+      "test:run": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wuweiss/instagram-counter.git"
+  },
+  "keywords": [
+    "instagram"
+  ],
+  "author": "wuweiss",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
