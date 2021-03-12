@@ -2,6 +2,9 @@
 
 Get count of followers for an instagram account
 
+## Requiements
+- nodejs-14_x
+
 ## Prerequisite
 This section describes how to setup all the facebook/ instagram app
 things you need to make a simple http call to get an instagram count.
