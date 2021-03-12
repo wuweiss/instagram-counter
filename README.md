@@ -2,8 +2,13 @@
 
 Get count of followers for an instagram account
 
-## useful tools
-- [access token debugger](https://developers.facebook.com/tools/debug/accesstoken/)
+## Prerequisite
+This section describes how to setup all the facebook/ instagram app
+things you need to make a simple http call to get an instagram count.
+
+### useful tools
+- [access token
+  debugger](https://developers.facebook.com/tools/debug/accesstoken/)
 
 ## Getting started:
 You need a lot of stuff...
@@ -46,8 +51,10 @@ You need a lot of stuff...
   - [using-graph-api common-scenarios](https://developers.facebook.com/docs/graph-api/using-graph-api/common-scenarios)
 
 - get facebook id for graphql queries of followers
-  - i.e. https://www.instagram.com/<myUserName>/?__a=1
-  - look for fbid
+  - open in browser `https://www.instagram.com/<myUserName>/?__a=1` ->
+    `myUserName` is the name of the instagram account you want the
+    follower count
+  - look for fbid thats the id
 
 - IG User (Instagram User) queries
   - [instagram user reference](https://developers.facebook.com/docs/instagram-api/reference/user/)
