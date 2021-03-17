@@ -1,32 +1,38 @@
 {
-  "name": "instagram-counter",
-  "version": "1.0.0",
-  "description": "Get count of followers for an instagram account",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "lint": "eslint \"src/**/*\"",
-    "lint:// FIXME: x": "npm run lint -- --fix",
-    "test": "run lint && npm run test:run",
-    "test:run": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:wuweiss/instagram-counter.git"
-  },
-  "keywords": [
-    "instagram"
-  ],
-  "author": "wuweiss",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^7.21.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "jest": "^26.6.3"
-  },
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
-  }
+    "name": "instagram-counter",
+    "version": "1.0.0",
+    "description": "Get count of followers for an instagram account",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon src/index.js",
+        "lint": "eslint \"src/**/*\"",
+        "lint:// FIXME: x": "npm run lint -- --fix",
+        "test": "npm run lint && npm run test:run",
+        "test:run": "node_modules/.bin/jest test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:wuweiss/instagram-counter.git"
+    },
+    "keywords": [
+        "instagram"
+    ],
+    "author": "wuweiss",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^7.21.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-plugin-import": "^2.22.1",
+        "jest": "^26.6.3"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "pug": "^3.0.2"
+    },
+    "jest": {
+        "verbose": true,
+        "testEnvironment": "node"
+    }
 }
