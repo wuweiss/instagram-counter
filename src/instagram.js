@@ -15,7 +15,6 @@ async function getFollower(config) {
                 throw new Error('followers_count key undefined');
             }
             return { number: res };
-
         })
         .catch((error) => error);
 }

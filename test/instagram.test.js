@@ -37,6 +37,6 @@ test('this test should return an error object', () => {
     return getFollower(unusedParam, unusedParam, unusedParam)
         .then((result) => {
             console.dir(result);
-            expect(result).toEqual(new Error('followers_count key undefined'));
+            expect(result).toEqual(expectedResult);
         });
 });
