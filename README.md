@@ -5,11 +5,11 @@ Get count of followers for an instagram account
 ## Config file
 create a `.env` file with the facebook app id, fields param you want to access, and the long lived token.
 
-`
-FACEBOOK_APP_ID=
-LONGLIVEDACCESSTOKEN=
+```
+FACEBOOK_APP_ID=XXX
+LONGLIVEDACCESSTOKEN=XXX
 FIELDS_PARAM=followers_count
-`
+```
 
 ## Prerequisite
 This section describes how to setup all the facebook/ instagram app
