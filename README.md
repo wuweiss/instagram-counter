@@ -2,8 +2,14 @@
 
 Get count of followers for an instagram account
 
-## Requiements
-- nodejs-14_x
+## Config file
+create a `.env` file with the facebook app id, fields param you want to access, and the long lived token.
+
+`
+FACEBOOK_APP_ID=
+LONGLIVEDACCESSTOKEN=
+FIELDS_PARAM=followers_count
+`
 
 ## Prerequisite
 This section describes how to setup all the facebook/ instagram app
@@ -56,7 +62,7 @@ You need a lot of stuff...
 - get facebook id for graphql queries of followers
   - open in browser `https://www.instagram.com/<myUserName>/?__a=1` ->
     `myUserName` is the name of the instagram account you want the
-    follower count
+    follower count (this user has to authorize your app).
   - look for fbid thats the id
 
 - IG User (Instagram User) queries
