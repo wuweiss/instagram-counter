@@ -8,12 +8,16 @@ dotenv.config();
 const app = express();
 const port = 5003;
 
-app.listen(port, (error) => {
-  if (error) {
-    console.error(error);
-  }
+app.listen(port);
+app.set('view engine', 'pug');
 
-  console.info(`server is listening on port: ${port}`);
+// This is the page for the authorization of the app and to get the short lived token
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: 'Authorize this app',
+        message: 'Please click on the button and authorize this app',
+        appId: process.env.FACEBOOK_APP_ID,
+    });
 });
 
 app.get('/instagram-followers/:fbId', (req, res) => {
