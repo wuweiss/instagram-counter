@@ -10,12 +10,14 @@ async function getFollower(config) {
     return axios.get(uri)
         .then((result) => {
             const res = result?.data?.followers_count;
-            const myError = {
-                error: { code: 'followers_count key undefined' },
-            };
-            return (res ? { number: res } : myError);
+
+            if (!res) {
+                throw new Error('followers_count key undefined');
+            }
+            return { number: res };
+
         })
-        .catch((error) => error.response.data);
+        .catch((error) => error);
 }
 
 exports.getFollower = getFollower;

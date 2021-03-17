@@ -27,5 +27,8 @@ app.get('/instagram-followers/:fbId', (req, res) => {
         token: process.env.LONGLIVEDACCESSTOKEN,
     })
         .then((number) => res.json(number))
-        .catch(console.error);
+        .catch((error) => {
+            console.error(error); // do proper logging
+            res.json(error);
+        });
 });
