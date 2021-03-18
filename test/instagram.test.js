@@ -1,18 +1,20 @@
 'use strict';
-const { getFollower } = require('../src/instagram');
+
 const axios = require('axios');
+const { getFollower } = require('../src/instagram');
+
 jest.mock('axios');
 
 test('this test should fetch followers count', () => {
     const unusedParam = '';
     const followers = 100;
     const expectedResult = {
-        number: followers
+        number: followers,
     };
     const mockedData = {
         data: {
-            followers_count: followers
-        }
+            followers_count: followers,
+        },
     };
 
     axios.get = jest.fn().mockResolvedValue(mockedData);
@@ -25,11 +27,11 @@ test('this test should fetch followers count', () => {
 
 test('this test should return an error object', () => {
     const unusedParam = '';
-    const expectedResult = new Error('followers_count key undefined')
+    const expectedResult = new Error('followers_count key undefined');
     const mockedData = new Error({
         wrongKey: {
-            followers_count: 100
-        }
+            followers_count: 100,
+        },
     });
 
     axios.get = jest.fn().mockResolvedValue(mockedData);
