@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
-const axios = require('axios');
-const { getFollower } = require('../src/instagram');
+const axios = require("axios");
+const { getFollower } = require("../src/instagram");
 
-jest.mock('axios');
+jest.mock("axios");
 
-test('this test should fetch followers count', () => {
-    const unusedParam = '';
+test("this test should fetch followers count", () => {
+    const unusedParam = "";
     const followers = 100;
     const expectedResult = {
         number: followers,
@@ -25,9 +25,9 @@ test('this test should fetch followers count', () => {
         });
 });
 
-test('this test should return an error object', () => {
-    const unusedParam = '';
-    const expectedResult = new Error('followers_count key undefined');
+test("this test should return an error object", () => {
+    const unusedParam = "";
+    const expectedResult = new Error("followers_count key undefined");
     const mockedData = new Error({
         wrongKey: {
             followers_count: 100,
