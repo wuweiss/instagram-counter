@@ -1,6 +1,9 @@
 # instagram-counter
 
-Get count of followers for an instagram account
+Get count of followers for an instagram professional account.
+```
+curl --request GET 'http://localhost:5003/instagram-followers/<myFacebookId>
+```
 
 ## Config file
 create a `.env` file with the facebook app id, fields param you want to access, and the long lived token.
